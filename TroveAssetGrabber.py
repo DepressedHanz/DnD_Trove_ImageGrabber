@@ -26,6 +26,12 @@ for link in soup.select("[href$='.png'], [href$='.jpeg'], [href$='.jpg']"):
             os.remove(i)
         except:
             pass
+        try:
+            urllib.request.urlretrieve(UserURL+"/"+link['href'], i)
+            zipObj.write(i)
+            os.remove(i)
+        except:
+            pass
 
 zipObj.close()
 print("Done")
