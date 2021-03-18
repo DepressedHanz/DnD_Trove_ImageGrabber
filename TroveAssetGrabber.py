@@ -34,7 +34,7 @@ for link in soup.select("[href$='.png'], [href$='.jpeg'], [href$='.jpg']"):
             pass
 
 zipObj.close()
-print("Done")
+
 
 
 
